@@ -22,7 +22,7 @@ export default function Selection3(props: PopupProps) {
     })
     if (res == 0) {
       // send email from customer to me
-      emailjs.sendForm('gmail', 'LoanTea', e.target, 'kTYnXkivDVx1g9XG6').then(
+      emailjs.sendForm('gmail', 'LoanTea', e.currentTarget, 'kTYnXkivDVx1g9XG6').then(
         (result) => {
           console.log(result.text)
         },
