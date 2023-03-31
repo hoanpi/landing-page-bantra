@@ -11,7 +11,7 @@ export default function Selection3(props: PopupProps) {
   const { isShow, isNotShow } = props
   const [info, setInfo] = useState<string>('')
 
-  const formRef = useRef<HTMLFormElement>(null)
+  const formRef = useRef<HTMLFormElement>()
   const submitContact = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const res = await sendContactForm({
