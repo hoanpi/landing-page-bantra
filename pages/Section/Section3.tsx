@@ -16,16 +16,14 @@ export default function Selection3(props: PopupProps) {
   const formRef = useRef()
   const submitContact = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const { name } = e.target.name.value as HTMLInputElement
-    const { email } = e.target.email.value as HTMLInputElement
-    const { phone } = e.target.phone.value as HTMLInputElement
-    const { message } = e.target.message.value as HTMLTextAreaElement
+    const { name, email, phone } = e.target as HTMLInputElement
+    const { message } = e.target as HTMLTextAreaElement
 
     const res = await sendContactForm({
-      name: name,
-      email: email,
-      phone: phone,
-      message: message
+      name: name.value,
+      email: email.value,
+      phone: phone.value,
+      message: message.value
     })
     if (res == 0) {
       // send email from customer to me
