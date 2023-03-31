@@ -9,14 +9,16 @@ interface PopupProps {
 
 export default function Selection3(props: PopupProps) {
   const { isShow, isNotShow } = props
+  const [info, setInfo] = useState<string>('')
+
   const formRef = useRef()
-  const submitContact = async (e) => {
+  const submitContact = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const res = await sendContactForm({
-      name: e.target[0].value,
-      email: e.target[1].value,
-      phone: e.target[2].value,
-      message: e.target[3].value
+      name: info,
+      email: info,
+      phone: info,
+      message: info
     })
     if (res == 0) {
       // send email from customer to me
@@ -33,6 +35,21 @@ export default function Selection3(props: PopupProps) {
     } else {
       isNotShow(false)
       formRef.current.reset()
+    }
+  }
+
+  const onChangeInput = (info: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target
+    if (info == 'name') {
+      setInfo(value)
+    } else if (info == 'email') {
+      setInfo(value)
+    } else if (info == 'phpne') {
+      setInfo(value)
+    } else if (info == 'message') {
+      setInfo(value)
+    } else {
+      setInfo(value)
     }
   }
 
@@ -91,6 +108,7 @@ export default function Selection3(props: PopupProps) {
                   className='form-control'
                   id='name'
                   name='name'
+                  onChange={onChangeInput('name')}
                   autoComplete='off'
                   type={'text'}
                   minLength={3}
@@ -102,17 +120,47 @@ export default function Selection3(props: PopupProps) {
                 <label className='label' htmlFor='email'>
                   Email
                 </label>
-                <input className='form-control' id='email' name='email' autoComplete='off' type={'email'} required />
+                <input
+                  className='form-control'
+                  id='email'
+                  name='email'
+                  onChange={onChangeInput('email')}
+                  autoComplete='off'
+                  type={'email'}
+                  required
+                />
               </div>
             </div>
-            <label className='label mt1' htmlFor='phone'>
-              Số Điện Thoại
-            </label>
-            <input className='form-control' id='phone' name='phone' autoComplete='off' type={'text'} required />
-            <label className='label mt1' htmlFor='message'>
-              Lời Nhắn
-            </label>
-            <textarea className='form-control' id='message' name='message' rows={3}></textarea>
+            <div className='grid-row'>
+              <div className='grid-column mt1'>
+                <label className='label' htmlFor='phone'>
+                  Số Điện Thoại
+                </label>
+                <input
+                  className='form-control'
+                  id='phone'
+                  name='phone'
+                  onChange={onChangeInput('phone')}
+                  autoComplete='off'
+                  type={'text'}
+                  required
+                />
+              </div>
+            </div>
+            <div className='grid-row'>
+              <div className='grid-column mt1'>
+                <label className='label' htmlFor='message'>
+                  Lời Nhắn
+                </label>
+                <textarea
+                  className='form-control'
+                  id='message'
+                  name='message'
+                  onChange={onChangeInput('message')}
+                  rows={3}
+                ></textarea>
+              </div>
+            </div>
             <div className='align--right mt1'>
               <button className='btn btn--outline' type='submit'>
                 Gửi
