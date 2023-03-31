@@ -12,16 +12,13 @@ import Footer from './Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [fullscreen, setFullscreen] = useState(true)
   const [show, setShow] = useState(false)
   const [not_show, setNotShow] = useState(false)
 
-  const handleShowPopup = (value: boolean, breakpoint: boolean) => {
+  const handleShowPopup = (value: boolean) => {
     if (value == true) {
-      setFullscreen(breakpoint)
       setShow(true)
     } else {
-      setFullscreen(breakpoint)
       setNotShow(true)
     }
   }
@@ -60,23 +57,13 @@ export default function Home() {
         <Selection3 isShowSuccess={handleShowPopup} isShowFail={handleShowPopup} />
       </main>
       <Footer />
-      <Modal
-        show={show}
-        fullscreen={fullscreen}
-        onHide={() => setShow(false)}
-        aria-labelledby='example-modal-sizes-title-sm'
-      >
+      <Modal show={show} size='lg' onHide={() => setShow(false)} aria-labelledby='example-modal-sizes-title-sm'>
         <Modal.Header closeButton>
           <Modal.Title id='example-modal-sizes-title-sm'>Thông Báo</Modal.Title>
         </Modal.Header>
         <Modal.Body>Cảm ơn bạn đã gửi thông tin liên hệ, chúng tôi sẽ phản hồi bạn sớm nhất!</Modal.Body>
       </Modal>
-      <Modal
-        show={not_show}
-        fullscreen={fullscreen}
-        onHide={() => setNotShow(false)}
-        aria-labelledby='example-modal-sizes-title-sm'
-      >
+      <Modal show={not_show} size='lg' onHide={() => setNotShow(false)} aria-labelledby='example-modal-sizes-title-sm'>
         <Modal.Header closeButton>
           <Modal.Title id='example-modal-sizes-title-sm'>Thông Báo</Modal.Title>
         </Modal.Header>

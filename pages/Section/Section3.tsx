@@ -3,8 +3,8 @@ import emailjs from '@emailjs/browser'
 import { sendContactForm } from '../../services'
 
 interface PopupProps {
-  isShowSuccess: (value: boolean, breakpoint: boolean) => void
-  isShowFail: (value: boolean, breakpoint: boolean) => void
+  isShowSuccess: (value: boolean) => void
+  isShowFail: (value: boolean) => void
 }
 
 export default function Selection3(props: PopupProps) {
