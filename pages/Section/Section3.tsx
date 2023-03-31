@@ -10,6 +10,7 @@ interface PopupProps {
 export default function Selection3(props: PopupProps) {
   const { isShow, isNotShow } = props
   const [info, setInfo] = useState<string>('')
+  const [textarea, setTextArea] = useState<string>('')
 
   const formRef = useRef() as MutableRefObject<HTMLFormElement>
   const submitContact = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -18,7 +19,7 @@ export default function Selection3(props: PopupProps) {
       name: info,
       email: info,
       phone: info,
-      message: info
+      message: textarea
     })
     if (res == 0) {
       // send email from customer to me
@@ -44,13 +45,16 @@ export default function Selection3(props: PopupProps) {
       setInfo(value)
     } else if (info == 'email') {
       setInfo(value)
-    } else if (info == 'phpne') {
-      setInfo(value)
-    } else if (info == 'message') {
+    } else if (info == 'phone') {
       setInfo(value)
     } else {
       setInfo(value)
     }
+  }
+
+  const onChangeTextArea = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const { value } = event.target
+    setTextArea(value)
   }
 
   return (
@@ -156,7 +160,7 @@ export default function Selection3(props: PopupProps) {
                   className='form-control'
                   id='message'
                   name='message'
-                  onChange={onChangeInput('message')}
+                  onChange={onChangeTextArea}
                   rows={3}
                 ></textarea>
               </div>
