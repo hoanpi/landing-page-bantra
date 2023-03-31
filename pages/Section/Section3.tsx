@@ -11,6 +11,7 @@ export default function Selection3(props: PopupProps) {
   const { isShow, isNotShow } = props
   const [info, setInfo] = useState<string>('')
 
+  const emailRef = useRef()
   const formRef = useRef()
   const submitContact = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -22,16 +23,16 @@ export default function Selection3(props: PopupProps) {
     })
     if (res == 0) {
       // send email from customer to me
-      emailjs.sendForm('gmail', 'LoanTea', e.currentTarget, 'kTYnXkivDVx1g9XG6').then(
-        (result) => {
-          console.log(result.text)
-        },
-        (error) => {
-          console.log(error.text)
-        }
-      )
+      // emailjs.sendForm('gmail', 'LoanTea', e.currentTarget, 'kTYnXkivDVx1g9XG6').then(
+      //   (result) => {
+      //     console.log(result.text)
+      //   },
+      //   (error) => {
+      //     console.log(error.text)
+      //   }
+      // )
       isShow(true)
-      formRef.current.reset()
+      emailRef.current.value = ''
     } else {
       isNotShow(false)
       formRef.current.reset()
@@ -98,7 +99,7 @@ export default function Selection3(props: PopupProps) {
               </div>
             </div>
           </div>
-          <form ref={formRef} onSubmit={submitContact}>
+          <form onSubmit={submitContact}>
             <div className='grid-row'>
               <div className='grid-column span-half mt1'>
                 <label className='label' htmlFor='name'>
@@ -127,6 +128,7 @@ export default function Selection3(props: PopupProps) {
                   onChange={onChangeInput('email')}
                   autoComplete='off'
                   type={'email'}
+                  ref={emailRef}
                   required
                 />
               </div>
