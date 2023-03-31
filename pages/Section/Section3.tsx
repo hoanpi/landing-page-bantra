@@ -5,25 +5,18 @@ import { sendContactForm } from '../../services'
 interface PopupProps {
   isShow: (value: boolean) => void
   isNotShow: (value: boolean) => void
-  name: (name: string) => void
-  email: (name: string) => void
-  phone: (name: string) => void
-  message: (name: string) => void
 }
 
 export default function Selection3(props: PopupProps) {
   const { isShow, isNotShow } = props
   const formRef = useRef()
-  const submitContact = async (e: React.FormEvent<HTMLFormElement>) => {
+  const submitContact = async (e) => {
     e.preventDefault()
-    const { name, email, phone } = e.target as HTMLInputElement
-    const { message } = e.target as HTMLTextAreaElement
-
     const res = await sendContactForm({
-      name: name.value,
-      email: email.value,
-      phone: phone.value,
-      message: message.value
+      name: e.target[0].value,
+      email: e.target[1].value,
+      phone: e.target[2].value,
+      message: e.target[3].value
     })
     if (res == 0) {
       // send email from customer to me
