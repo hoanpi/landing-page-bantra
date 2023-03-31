@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, MutableRefObject } from 'react'
 import emailjs from '@emailjs/browser'
 import { sendContactForm } from '../../services'
 
@@ -11,7 +11,7 @@ export default function Selection3(props: PopupProps) {
   const { isShow, isNotShow } = props
   const [info, setInfo] = useState<string>('')
 
-  const formRef = useRef<HTMLFormElement>()
+  const formRef = useRef() as MutableRefObject<HTMLFormElement>
   const submitContact = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const res = await sendContactForm({
