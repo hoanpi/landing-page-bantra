@@ -17,7 +17,7 @@ export default function Home() {
   const [show, setShow] = useState(false)
   const [not_show, setNotShow] = useState(false)
 
-  const handleShowPopup = (value: boolean, breakpoint: array) => {
+  const handleShowPopup = (value: boolean, breakpoint) => {
     if (value == true) {
       setFullscreen(breakpoint)
       setShow(true)

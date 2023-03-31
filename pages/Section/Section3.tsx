@@ -2,7 +2,12 @@ import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import { sendContactForm } from '../../services'
 
-export default function Selection3(props) {
+interface PopupProps {
+  isShow: (value: boolean) => void
+  isNotShow: (value: boolean) => void
+}
+
+export default function Selection3(props: PopupProps) {
   const { isShow, isNotShow } = props
   const formRef = useRef()
   const submitContact = async (e) => {
