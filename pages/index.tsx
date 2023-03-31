@@ -12,7 +12,6 @@ import Footer from './Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const values = ['sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down']
   const [fullscreen, setFullscreen] = useState(true)
   const [show, setShow] = useState(false)
   const [not_show, setNotShow] = useState(false)
@@ -58,7 +57,7 @@ export default function Home() {
       <main>
         <Selection1 />
         <Selection2 />
-        <Selection3 isShow={handleShowPopup} isNotShow={handleShowPopup} />
+        <Selection3 isShowSuccess={handleShowPopup} isShowFail={handleShowPopup} />
       </main>
       <Footer />
       <Modal

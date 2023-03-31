@@ -3,12 +3,12 @@ import emailjs from '@emailjs/browser'
 import { sendContactForm } from '../../services'
 
 interface PopupProps {
-  isShow: (value: boolean) => void
-  isNotShow: (value: boolean) => void
+  isShowSuccess: (value: boolean, breakpoint: boolean) => void
+  isShowFail: (value: boolean, breakpoint: boolean) => void
 }
 
 export default function Selection3(props: PopupProps) {
-  const { isShow, isNotShow } = props
+  const { isShowSuccess, isShowFail } = props
   const [info, setInfo] = useState<string>('')
   const [textarea, setTextArea] = useState<string>('')
 
@@ -31,10 +31,10 @@ export default function Selection3(props: PopupProps) {
           console.log(error.text)
         }
       )
-      isShow(true)
+      isShowSuccess(true)
       formRef.current.reset()
     } else {
-      isNotShow(false)
+      isShowFail(false)
       formRef.current.reset()
     }
   }
