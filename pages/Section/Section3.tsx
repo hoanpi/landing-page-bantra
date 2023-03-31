@@ -10,13 +10,13 @@ interface PopupProps {
 export default function Selection3(props: PopupProps) {
   const { isShow, isNotShow } = props
   const formRef = useRef()
-  const submitContact = async (e) => {
+  const submitContact = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const res = await sendContactForm({
-      name: e.target[0].value,
-      email: e.target[1].value,
-      phone: e.target[2].value,
-      message: e.target[3].value
+      name: e.target.name.value,
+      email: e.target.email.value,
+      phone: e.target.phone.value,
+      message: e.target.message.value
     })
     if (res == 0) {
       // send email from customer to me
