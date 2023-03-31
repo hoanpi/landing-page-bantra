@@ -1,0 +1,5 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+User-agent: *
+Allow: /
+Sitemap: https://landing-page-bantra.vercel.app/sitemap.xml

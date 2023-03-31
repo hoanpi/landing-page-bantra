@@ -1,0 +1,210 @@
+// Base global styles
+// -------------------------------------------------------------------
+// 2. Set the default font stylings for the entire project.
+// 3. https://github.com/twbs/bootstrap/issues/3772#issuecomment-7566868
+// 4. paulirish.com/2012/box-sizing-border-box-ftw/
+// css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+html {
+  box-sizing: border-box; // [4]
+  font-family: $font-family--base; // [2]
+  font-size: $font-size--mobile; // [2]
+  font-style: normal; // [2]
+  font-weight: $font-weight--base; // [2]
+  min-height: 100%; // Ensure the page always fills at least the entire height of the viewport
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // [3]
+
+  @media screen and (min-width: $breakpoint--sm) {
+    font-size: $font-size--desktop;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+} // [4]
+
+// 1. Fix for webkit rendering. Fonts on OSX will look more consistent with
+//    other systems that do not render text using sub-pixel anti-aliasing.
+// 2. For now, this is `!important` because the `::selection` (below) affects
+//    the background color in IE.
+body {
+  background-color: $tan !important; // [2]
+  color: $text-color;
+  line-height: $line-height--base;
+  margin: 0;
+  padding: 0;
+  -moz-osx-font-smoothing: grayscale; // [1]
+}
+
+// Remove text-shadow in selection highlight: h5bp.com/i
+// These selection rule sets have to be separate.
+::-moz-selection {
+  background-color: $primary-color;
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background-color: $primary-color;
+  color: #fff;
+  text-shadow: none;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+
+.gray-bg {
+  background: #fbfbfb;
+}
+.justify-content-center {
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+.section-title .title {
+  font-weight: 700;
+  font-size: 45px;
+  color: #000;
+  padding-bottom: 20px;
+  line-height: 60px;
+  margin: 0;
+}
+.section-title p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #8a8fa3;
+  margin: 0;
+}
+.single-pricing:hover {
+  box-shadow: 0 0 21px 0 rgba(152, 152, 152, 0.23);
+}
+.single-pricing .pricing-package {
+  background-color: #754ef9;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.single-pricing .pricing-package .package-title {
+  font-size: 22px;
+  color: #fff;
+  padding: 25px;
+  margin: 0;
+}
+.single-pricing .pricing-body {
+  border: 1px solid #ddd;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.single-pricing .pricing-body .pricing-text {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 25px;
+}
+.single-pricing .pricing-body .pricing-text p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #8a8fa3;
+  margin: 0;
+  padding-bottom: 10px;
+}
+.single-pricing .pricing-body .pricing-text .price {
+  font-size: 30px;
+  font-weight: 600;
+  color: #754ef9;
+}
+.single-pricing .pricing-body .pricing-list {
+  padding-top: 30px;
+}
+.single-pricing .pricing-body .pricing-list ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.single-pricing .pricing-body .pricing-list ul li {
+  line-height: 36px;
+  color: #32333c;
+  font-size: 16px;
+  text-align: left;
+  padding: 0 20px;
+}
+.single-pricing .pricing-body .pricing-btn {
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+.single-pricing .pricing-body .pricing-btn .main-btn {
+  background-color: #fff;
+  color: #754ef9;
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid #754ef9;
+  padding: 0 40px;
+  font-size: 15px;
+  line-height: 48px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 5;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  -webkit-box-shadow: 0 5px 8px 0 rgba(118, 78, 249, 0.55);
+  -moz-box-shadow: 0 5px 8px 0 rgba(118, 78, 249, 0.55);
+  box-shadow: 0 5px 8px 0 rgba(118, 78, 249, 0.55);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.single-pricing .pricing-body .pricing-btn .main-btn:hover {
+  background-color: #754ef9;
+  color: #fff;
+}
+.contact-box {
+  background-color: #fff;
+  border: 1px solid #fff;
+  padding: 30px 20px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.contact-box:hover {
+  -webkit-box-shadow: 0 0 21px 0 rgb(0 0 0 / 23%);
+  -moz-box-shadow: 0 0 21px 0 rgb(0 0 0 / 23%);
+  box-shadow: 0 0 21px 0 rgb(0 0 0 / 23%);
+}
+.contact-box .contact-icon i {
+  font-size: 48px;
+  color: #74c7aa;
+}
+.contact-box .contact-content {
+  margin-top: 15px;
+}
+.contact-box .contact-content .contact-title {
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 15px;
+  margin: 0;
+}
+.contact-box .contact-content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #8a8fa3;
+  margin: 0;
+}
+.modal-header {
+  border-bottom: 2px solid #dee2e6 !important;
+}
+.modal-header .btn-close {
+  cursor: pointer;
+}
