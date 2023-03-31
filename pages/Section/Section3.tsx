@@ -9,21 +9,23 @@ interface PopupProps {
 
 export default function Selection3(props: PopupProps) {
   const { isShowSuccess, isShowFail } = props
-  const [info, setInfo] = useState<string>('')
+  const [name, setName] = useState<string>('')
+  const [email, setEmail] = useState<string>('')
+  const [phone, setPhone] = useState<string>('')
   const [textarea, setTextArea] = useState<string>('')
 
   const formRef = useRef() as MutableRefObject<HTMLFormElement>
   const submitContact = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const res = await sendContactForm({
-      name: info,
-      email: info,
-      phone: info,
+      name: name,
+      email: email,
+      phone: phone,
       message: textarea
     })
     if (res == 0) {
       // send email from customer to me
-      emailjs.sendForm('gmail', 'LoanTea', e.currentTarget, 'kTYnXkivDVx1g9XG6').then(
+      emailjs.sendForm('gmail', 'LoanTea', formRef.current, 'kTYnXkivDVx1g9XG6').then(
         (result) => {
           console.log(result.text)
         },
@@ -39,19 +41,18 @@ export default function Selection3(props: PopupProps) {
     }
   }
 
-  const onChangeInput = (info: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeInputName = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target
-    if (info == 'name') {
-      setInfo(value)
-    } else if (info == 'email') {
-      setInfo(value)
-    } else if (info == 'phone') {
-      setInfo(value)
-    } else {
-      setInfo(value)
-    }
+    setName(value)
   }
-
+  const onChangeInputEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target
+    setEmail(value)
+  }
+  const onChangeInputPhone = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target
+    setPhone(value)
+  }
   const onChangeTextArea = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const { value } = event.target
     setTextArea(value)
@@ -112,7 +113,7 @@ export default function Selection3(props: PopupProps) {
                   className='form-control'
                   id='name'
                   name='name'
-                  onChange={onChangeInput('name')}
+                  onChange={onChangeInputName}
                   autoComplete='off'
                   type={'text'}
                   minLength={3}
@@ -128,7 +129,7 @@ export default function Selection3(props: PopupProps) {
                   className='form-control'
                   id='email'
                   name='email'
-                  onChange={onChangeInput('email')}
+                  onChange={onChangeInputEmail}
                   autoComplete='off'
                   type={'email'}
                   required
@@ -144,7 +145,7 @@ export default function Selection3(props: PopupProps) {
                   className='form-control'
                   id='phone'
                   name='phone'
-                  onChange={onChangeInput('phone')}
+                  onChange={onChangeInputPhone}
                   autoComplete='off'
                   type={'text'}
                   required
