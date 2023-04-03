@@ -9,6 +9,10 @@ interface PopupProps {
 
 export default function Selection3(props: PopupProps) {
   const { isShowSuccess, isShowFail } = props
+  const [showEmailError, setEmailShowError] = useState(false)
+  const [showPhoneError, setPhoneShowError] = useState(false)
+  const [messageEmailError, setMessageEmailError] = useState<string>('')
+  const [messagePhoneError, setMessagePhoneError] = useState<string>('')
   const [name, setName] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [phone, setPhone] = useState<string>('')
@@ -25,14 +29,14 @@ export default function Selection3(props: PopupProps) {
     })
     if (res == 0) {
       // send email from customer to me
-      emailjs.sendForm('gmail', 'LoanTea', formRef.current, 'kTYnXkivDVx1g9XG6').then(
-        (result) => {
-          console.log(result.text)
-        },
-        (error) => {
-          console.log(error.text)
-        }
-      )
+      // emailjs.sendForm('gmail', 'LoanTea', formRef.current, 'kTYnXkivDVx1g9XG6').then(
+      //   (result) => {
+      //     console.log(result.text)
+      //   },
+      //   (error) => {
+      //     console.log(error.text)
+      //   }
+      // )
       isShowSuccess(true)
       formRef.current.reset()
     } else {
@@ -47,13 +51,34 @@ export default function Selection3(props: PopupProps) {
   }
   const onChangeInputEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target
+    const regEmail =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
     setEmail(value)
+    if (!regEmail.test(event.target.value) && event.target.value !== '') {
+      setEmailShowError(true)
+      setMessageEmailError('Địa chỉ Email chưa hợp lệ.')
+    } else if (event.target.value === '') {
+      setEmailShowError(true)
+      setMessageEmailError('Địa chỉ Email không được để trống.')
+    } else {
+      setEmailShowError(false)
+    }
   }
   const onChangeInputPhone = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target
     const re = /^[0-9\b]+$/
+    setPhone(value)
     if (event.target.value === '' || re.test(event.target.value)) {
-      setPhone(value)
+      if ((event.target.value.length < 10 || event.target.value.length > 11) && event.target.value !== '') {
+        setPhoneShowError(true)
+        setMessagePhoneError('Số điện thoại chưa hợp lệ.')
+      } else if (event.target.value === '') {
+        setPhoneShowError(true)
+        setMessagePhoneError('Số điện thoại không được để trống')
+      } else {
+        setPhoneShowError(false)
+      }
     }
   }
   const onChangeTextArea = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -137,6 +162,11 @@ export default function Selection3(props: PopupProps) {
                   type={'email'}
                   required
                 />
+                {showEmailError && (
+                  <p className='error'>
+                    <strong>{messageEmailError}</strong>
+                  </p>
+                )}
               </div>
             </div>
             <div className='grid-row'>
@@ -149,11 +179,15 @@ export default function Selection3(props: PopupProps) {
                   id='phone'
                   name='phone'
                   onChange={onChangeInputPhone}
-                  value={phone}
                   autoComplete='off'
                   type={'text'}
                   required
                 />
+                {showPhoneError && (
+                  <p className='error'>
+                    <strong>{messagePhoneError}</strong>
+                  </p>
+                )}
               </div>
             </div>
             <div className='grid-row'>
