@@ -23,6 +23,9 @@ export default function Home() {
     }
   }
 
+  const handleCloseSuc = () => setShow(false)
+  const handleCloseFai = () => setNotShow(false)
+
   return (
     <>
       <Head>
@@ -57,17 +60,39 @@ export default function Home() {
         <Selection3 isShowSuccess={handleShowPopup} isShowFail={handleShowPopup} />
       </main>
       <Footer />
-      <Modal show={show} size='lg' onHide={() => setShow(false)} aria-labelledby='example-modal-sizes-title-sm'>
-        <Modal.Header closeButton>
-          <Modal.Title id='example-modal-sizes-title-sm'>Thông Báo</Modal.Title>
+      <Modal show={show} onHide={() => setShow(false)} aria-labelledby='example-modal-sizes-title-sm'>
+        <Modal.Header>
+          <div className='icon-box'>
+            <i className='material-icons'></i>
+          </div>
+          <h4 className='modal-title'>Thông báo!</h4>
         </Modal.Header>
-        <Modal.Body>Cảm ơn bạn đã gửi thông tin liên hệ, chúng tôi sẽ phản hồi bạn sớm nhất!</Modal.Body>
+        <Modal.Body>
+          <p className='align--center'>
+            Cảm ơn bạn đã gửi thông tin liên hệ, chúng tôi sẽ phản hồi bạn trong thời gian sớm nhất!
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <button className='btn btn-success btn-block' data-dismiss='modal' onClick={handleCloseSuc}>
+            OK
+          </button>
+        </Modal.Footer>
       </Modal>
-      <Modal show={not_show} size='lg' onHide={() => setNotShow(false)} aria-labelledby='example-modal-sizes-title-sm'>
-        <Modal.Header closeButton>
-          <Modal.Title id='example-modal-sizes-title-sm'>Thông Báo</Modal.Title>
+      <Modal show={not_show} onHide={() => setNotShow(false)} aria-labelledby='example-modal-sizes-title-sm'>
+        <Modal.Header>
+          <div className='icon-box'>
+            <i className='material-icons'></i>
+          </div>
+          <h4 className='modal-title'>Thông báo!</h4>
         </Modal.Header>
-        <Modal.Body>Đã xảy ra sự cố, Vui lòng thử lại !!</Modal.Body>
+        <Modal.Body>
+          <p className='align--center'>Đã xảy ra sự cố, Vui lòng thử lại !!</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <button className='btn btn-success btn-block' data-dismiss='modal' onClick={handleCloseFai}>
+            OK
+          </button>
+        </Modal.Footer>
       </Modal>
     </>
   )

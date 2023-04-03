@@ -51,7 +51,10 @@ export default function Selection3(props: PopupProps) {
   }
   const onChangeInputPhone = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target
-    setPhone(value)
+    const re = /^[0-9\b]+$/
+    if (event.target.value === '' || re.test(event.target.value)) {
+      setPhone(value)
+    }
   }
   const onChangeTextArea = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const { value } = event.target
@@ -146,6 +149,7 @@ export default function Selection3(props: PopupProps) {
                   id='phone'
                   name='phone'
                   onChange={onChangeInputPhone}
+                  value={phone}
                   autoComplete='off'
                   type={'text'}
                   required
@@ -163,6 +167,7 @@ export default function Selection3(props: PopupProps) {
                   name='message'
                   onChange={onChangeTextArea}
                   rows={3}
+                  maxLength={500}
                 ></textarea>
               </div>
             </div>
