@@ -62,7 +62,7 @@ export default function Home() {
       <Footer />
       <Modal show={show} onHide={() => setShow(false)} aria-labelledby='example-modal-sizes-title-sm'>
         <Modal.Header>
-          <div className='icon-box'>
+          <div className='icon-box-suc'>
             <i className='material-icons'></i>
           </div>
           <h4 className='modal-title'>Thông báo!</h4>
@@ -80,8 +80,8 @@ export default function Home() {
       </Modal>
       <Modal show={not_show} onHide={() => setNotShow(false)} aria-labelledby='example-modal-sizes-title-sm'>
         <Modal.Header>
-          <div className='icon-box'>
-            <i className='material-icons'></i>
+          <div className='icon-box-fai'>
+            <i className='material-icons'></i>
           </div>
           <h4 className='modal-title'>Thông báo!</h4>
         </Modal.Header>
