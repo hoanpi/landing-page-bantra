@@ -29,17 +29,17 @@ export default function Home() {
         <title>Loan Tea • Chuyên Các Loại Trà Thái Nguyên Ngon.</title>
         <meta
           name='keywords'
-          content='trà thái nguyên, trà hạt truyền thống, trà lai ngon, trà long vân, trà nõn tôm ngon, dụng nõn tôm đặc biệt, trà đinh ngon, trà đinh đặc biệt, trà đinh thượng hạng, loan tea, loan trà'
+          content='trà thái nguyên, trà hạt truyền thống, trà lai ngon, trà long vân, trà nõn tôm ngon, trà nõn tôm đặc biệt, trà đinh ngon, trà đinh đặc biệt, trà đinh thượng hạng, loan tea, loan trà'
         ></meta>
         <meta
           name='description'
-          content='Loan Tea chuyên cung cấp các loại trà ngon tại Thái Nguyên như Trà Hạt Truyền Thống, Trà Lai Ngon, Trà Long Vân, Trà Tôm Nõn Ngon, Trà Tôm Nõn Đặc Biệt, Trà Đinh Ngon, Trà Đinh Thượng Hạng. Hotline: 0865.070.496'
+          content='Loan Tea chuyên cung cấp các loại trà ngon tại Thái Nguyên như Trà Hạt Truyền Thống, Trà Lai Ngon, Trà Long Vân, Trà Nõn Tôm Ngon, Trà Nõn Tôm Đặc Biệt, Trà Đinh Ngon, Trà Đinh Thượng Hạng. Hotline: 0865.070.496'
         />
         <link rel='canonical' href='https://landing-page-bantra.vercel.app/'></link>
         <meta property='og:title' content='Loan Tea • Chuyên Các Loại Trà Thái Nguyên Ngon.' />
         <meta
           property='og:description'
-          content='Loan Tea chuyên cung cấp các loại trà ngon tại Thái Nguyên như Trà Hạt Truyền Thống, Trà Lai Ngon, Trà Long Vân, Trà Tôm Nõn Ngon, Trà Tôm Nõn Đặc Biệt, Trà Đinh Ngon, Trà Đinh Thượng Hạng. Hotline: 0865.070.496'
+          content='Loan Tea chuyên cung cấp các loại trà ngon tại Thái Nguyên như Trà Hạt Truyền Thống, Trà Lai Ngon, Trà Long Vân, Trà Nõn Tôm Ngon, Trà Nõn Tôm Đặc Biệt, Trà Đinh Ngon, Trà Đinh Thượng Hạng. Hotline: 0865.070.496'
         />
         <meta property='og:url' content='https://landing-page-bantra.vercel.app/' />
         <meta property='og:type' content='website' />
