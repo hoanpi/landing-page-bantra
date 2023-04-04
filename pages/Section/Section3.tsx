@@ -210,7 +210,7 @@ export default function Selection3(props: PopupProps) {
                 ></textarea>
               </div>
             </div>
-            <div className='align--right mt1'>
+            <div className='align--right mt2'>
               <button className='btn btn--outline' type='submit'>
                 Gửi
               </button>

@@ -33,10 +33,12 @@ export default function Selection2() {
                 <div className='pricing-list'>
                   <ul>
                     <li>
-                      - Đặc điểm: màu nước xanh trong, hương cốm đặc trưng, vị trà chát nhiều nhưng dịu, hậu ngọt sâu,
-                      thích hợp cho người có gu uống trà đậm.
+                      - <strong>Đặc điểm</strong> : màu nước xanh trong, hương cốm đặc trưng, vị trà chát nhiều nhưng
+                      dịu, hậu ngọt sâu, thích hợp cho người có gu uống trà đậm.
                     </li>
-                    <li>- Cách hái: 1 đọt + 2 đến 3 lá non liền kề bên dưới.</li>
+                    <li>
+                      - <strong>Cách hái</strong> : 1 đọt + 2 đến 3 lá non liền kề bên dưới.
+                    </li>
                     <li>- Giá chè búp Thái Nguyên tại Lộc Tân Cương: 350.000đ / 1Kg</li>
                   </ul>
                 </div>
@@ -64,10 +66,12 @@ export default function Selection2() {
                 <div className='pricing-list'>
                   <ul>
                     <li>
-                      - Đặc điểm: màu nước xanh trong, hương cốm đặc trưng, vị trà chát nhiều nhưng dịu, hậu ngọt sâu,
-                      thích hợp cho người có gu uống trà đậm.
+                      - <strong>Đặc điểm</strong> : màu nước xanh trong, hương cốm đặc trưng, vị trà chát nhiều nhưng
+                      dịu, hậu ngọt sâu, thích hợp cho người có gu uống trà đậm.
                     </li>
-                    <li>- Cách hái: 1 đọt + 2 đến 3 lá non liền kề bên dưới.</li>
+                    <li>
+                      - <strong>Cách hái</strong> : 1 đọt + 2 đến 3 lá non liền kề bên dưới.
+                    </li>
                     <li>- Giá chè búp Thái Nguyên tại Lộc Tân Cương: 350.000đ / 1Kg</li>
                   </ul>
                 </div>
@@ -95,10 +99,12 @@ export default function Selection2() {
                 <div className='pricing-list'>
                   <ul>
                     <li>
-                      - Đặc điểm: màu nước xanh trong, hương cốm đặc trưng, vị trà chát nhiều nhưng dịu, hậu ngọt sâu,
-                      thích hợp cho người có gu uống trà đậm.
+                      - <strong>Đặc điểm</strong> : màu nước xanh trong, hương cốm đặc trưng, vị trà chát nhiều nhưng
+                      dịu, hậu ngọt sâu, thích hợp cho người có gu uống trà đậm.
                     </li>
-                    <li>- Cách hái: 1 đọt + 2 đến 3 lá non liền kề bên dưới.</li>
+                    <li>
+                      - <strong>Cách hái</strong> : 1 đọt + 2 đến 3 lá non liền kề bên dưới.
+                    </li>
                     <li>- Giá chè búp Thái Nguyên tại Lộc Tân Cương: 350.000đ / 1Kg</li>
                   </ul>
                 </div>
