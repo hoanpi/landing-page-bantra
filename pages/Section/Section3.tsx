@@ -29,16 +29,17 @@ export default function Selection3(props: PopupProps) {
     })
     if (res == 0) {
       // send email from customer to me
-      // emailjs.sendForm('gmail', 'LoanTea', formRef.current, 'kTYnXkivDVx1g9XG6').then(
-      //   (result) => {
-      //     console.log(result.text)
-      //   },
-      //   (error) => {
-      //     console.log(error.text)
-      //   }
-      // )
+      emailjs.sendForm('gmail', 'LoanTea', formRef.current, 'kTYnXkivDVx1g9XG6').then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
       isShowSuccess(true)
       formRef.current.reset()
+      setPhone('')
     } else {
       isShowFail(false)
       formRef.current.reset()
@@ -54,7 +55,6 @@ export default function Selection3(props: PopupProps) {
     const regEmail =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-    setEmail(value)
     if (!regEmail.test(event.target.value) && event.target.value !== '') {
       setEmailShowError(true)
       setMessageEmailError('Địa chỉ Email chưa hợp lệ.')
@@ -64,11 +64,13 @@ export default function Selection3(props: PopupProps) {
     } else {
       setEmailShowError(false)
     }
+
+    setEmail(value)
   }
   const onChangeInputPhone = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target
     const re = /^[0-9\b]+$/
-    setPhone(value)
+
     if (event.target.value === '' || re.test(event.target.value)) {
       if ((event.target.value.length < 10 || event.target.value.length > 11) && event.target.value !== '') {
         setPhoneShowError(true)
@@ -79,6 +81,8 @@ export default function Selection3(props: PopupProps) {
       } else {
         setPhoneShowError(false)
       }
+
+      setPhone(value)
     }
   }
   const onChangeTextArea = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -179,6 +183,7 @@ export default function Selection3(props: PopupProps) {
                   id='phone'
                   name='phone'
                   onChange={onChangeInputPhone}
+                  value={phone}
                   autoComplete='off'
                   type={'text'}
                   required
