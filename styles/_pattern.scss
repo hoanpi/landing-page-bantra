@@ -45,4 +45,8 @@
 .info-image {
   width: 422px;
   height: 422px;
+
+  @include mobile {
+    height: 382px;
+  }
 }
