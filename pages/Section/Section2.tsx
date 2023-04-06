@@ -25,7 +25,7 @@ export default function Selection2() {
               <div className='pricing-body'>
                 <div className='pricing-text'>
                   <p>Loại trà được yêu thích từ ngàn đời nay.</p>
-                  <span className='price'>350.000đ / 1Kg</span>
+                  <span className='price'>250.000đ / 1Kg</span>
                 </div>
                 <div className='pricing-list'>
                   <ul>
