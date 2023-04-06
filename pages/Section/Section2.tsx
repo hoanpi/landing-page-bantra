@@ -54,7 +54,7 @@ export default function Selection2() {
               </div>
               <div className='pricing-body'>
                 <div className='pricing-text'>
-                  <p>Trà mạn Lai 1 loại trà được trồng từ cành.</p>
+                  <p>Trà mạn Lai 1 là loại trà được trồng từ cành.</p>
                   <span className='price'>350.000đ / 1Kg</span>
                 </div>
                 <div className='pricing-list'>
@@ -84,7 +84,7 @@ export default function Selection2() {
               </div>
               <div className='pricing-body'>
                 <div className='pricing-text'>
-                  <p>Là đặc sản vùng Trà La Bằng - Thái Nguyên.</p>
+                  <p>Trà Long Vân là đặc sản vùng Trà La Bằng - Thái Nguyên.</p>
                   <span className='price'>500.000đ / 1Kg</span>
                 </div>
                 <div className='pricing-list'>
