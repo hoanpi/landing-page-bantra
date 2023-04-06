@@ -20,26 +20,23 @@ export default function Selection2() {
           <div className='col-lg-4 col-md-8 col-sm-9'>
             <div className='single-pricing align--center mt-30'>
               <div className='pricing-package'>
-                <h4 className='package-title'>Chè Mạn</h4>
+                <h4 className='package-title'>Trà Mạn Truyền Thống</h4>
               </div>
               <div className='pricing-body'>
                 <div className='pricing-text'>
-                  <p>
-                    Chè mạn Thái Nguyên là loại chè từ lúc hái đến khi thành phẩm không trải qua quá trình ướp với bất
-                    kỳ loại hoa hay hương nào.
-                  </p>
+                  <p>Loại trà được yêu thích từ ngàn đời nay.</p>
                   <span className='price'>350.000đ / 1Kg</span>
                 </div>
                 <div className='pricing-list'>
                   <ul>
                     <li>
-                      - <strong>Đặc điểm</strong> : màu nước xanh trong, hương cốm đặc trưng, vị trà chát nhiều nhưng
-                      dịu, hậu ngọt sâu, thích hợp cho người có gu uống trà đậm.
+                      - <strong>Đặc điểm</strong> : có vị chát và đắng nhẹ, hậu vị ngọt - nước trà xanh ngả vàng(vàng
+                      nhiều) đặc trưng của trà.
                     </li>
                     <li>
-                      - <strong>Cách hái</strong> : 1 đọt + 2 đến 3 lá non liền kề bên dưới.
+                      - <strong>Cách hái</strong> : 1 tôm + 2 đến 3 lá non.
                     </li>
-                    <li>- Giá chè búp Thái Nguyên tại Lộc Tân Cương: 350.000đ / 1Kg</li>
+                    <li>- Giá trà mạn truyền thống tại LoanTea: 250.000đ / 1Kg</li>
                   </ul>
                 </div>
                 <div className='pricing-btn'>
@@ -53,26 +50,23 @@ export default function Selection2() {
           <div className='col-lg-4 col-md-8 col-sm-9'>
             <div className='single-pricing align--center mt-30'>
               <div className='pricing-package'>
-                <h4 className='package-title'>Chè Móc Câu</h4>
+                <h4 className='package-title'>Trà Mạn Lai 1</h4>
               </div>
               <div className='pricing-body'>
                 <div className='pricing-text'>
-                  <p>
-                    Chè mạn Thái Nguyên là loại chè từ lúc hái đến khi thành phẩm không trải qua quá trình ướp với bất
-                    kỳ loại hoa hay hương nào.
-                  </p>
+                  <p>Trà mạn Lai 1 loại trà được trồng từ cành.</p>
                   <span className='price'>350.000đ / 1Kg</span>
                 </div>
                 <div className='pricing-list'>
                   <ul>
                     <li>
-                      - <strong>Đặc điểm</strong> : màu nước xanh trong, hương cốm đặc trưng, vị trà chát nhiều nhưng
-                      dịu, hậu ngọt sâu, thích hợp cho người có gu uống trà đậm.
+                      - <strong>Đặc điểm</strong> : cánh trà nhỏ, có vị chát và đắng nhẹ, phù hợp với mọi gia đình, lứa
+                      tuổi.
                     </li>
                     <li>
-                      - <strong>Cách hái</strong> : 1 đọt + 2 đến 3 lá non liền kề bên dưới.
+                      - <strong>Cách hái</strong> : 1 tôm + 2 lá.
                     </li>
-                    <li>- Giá chè búp Thái Nguyên tại Lộc Tân Cương: 350.000đ / 1Kg</li>
+                    <li>- Giá trà mạn Lai 1 tại LoanTea: 350.000đ / 1Kg</li>
                   </ul>
                 </div>
                 <div className='pricing-btn'>
@@ -86,26 +80,80 @@ export default function Selection2() {
           <div className='col-lg-4 col-md-8 col-sm-9'>
             <div className='single-pricing align--center mt-30'>
               <div className='pricing-package'>
-                <h4 className='package-title'>Chè Nõn Tôm</h4>
+                <h4 className='package-title'>Trà Búp Long Vân</h4>
               </div>
               <div className='pricing-body'>
                 <div className='pricing-text'>
-                  <p>
-                    Chè mạn Thái Nguyên là loại chè từ lúc hái đến khi thành phẩm không trải qua quá trình ướp với bất
-                    kỳ loại hoa hay hương nào.
-                  </p>
-                  <span className='price'>350.000đ / 1Kg</span>
+                  <p>Là đặc sản vùng Trà La Bằng - Thái Nguyên.</p>
+                  <span className='price'>500.000đ / 1Kg</span>
                 </div>
                 <div className='pricing-list'>
                   <ul>
                     <li>
-                      - <strong>Đặc điểm</strong> : màu nước xanh trong, hương cốm đặc trưng, vị trà chát nhiều nhưng
-                      dịu, hậu ngọt sâu, thích hợp cho người có gu uống trà đậm.
+                      - <strong>Đặc điểm</strong> : màu nước xanh trong, hậu vị ngọt, mùi thơm đặc trưng của Long Vân.
                     </li>
                     <li>
-                      - <strong>Cách hái</strong> : 1 đọt + 2 đến 3 lá non liền kề bên dưới.
+                      - <strong>Cách hái</strong> : 1 tôm + 2 lá.
                     </li>
-                    <li>- Giá chè búp Thái Nguyên tại Lộc Tân Cương: 350.000đ / 1Kg</li>
+                    <li>- Giá trà búp Long Vân tại LoanTea: 500.000đ / 1Kg</li>
+                  </ul>
+                </div>
+                <div className='pricing-btn'>
+                  <a className='main-btn' href='#contact'>
+                    Liên hệ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='col-lg-4 col-md-8 col-sm-9'>
+            <div className='single-pricing align--center mt-30'>
+              <div className='pricing-package'>
+                <h4 className='package-title'>Trà Móc Câu</h4>
+              </div>
+              <div className='pricing-body'>
+                <div className='pricing-text'>
+                  <p>Thu thành phẩm trà cánh nhỏ sắc nhọn như móc câu.</p>
+                  <span className='price'>500K - 800K / 1Kg</span>
+                </div>
+                <div className='pricing-list'>
+                  <ul>
+                    <li>
+                      - <strong>Đặc điểm</strong> : nước sánh vàng, chát nhẹ, hậu vị ngọt, thơm.
+                    </li>
+                    <li>
+                      - <strong>Cách hái</strong> : 1 tôm + 1 lá.
+                    </li>
+                    <li>- Giá trà móc câu tại LoanTea: 500.000đ - 800.000đ / 1Kg</li>
+                  </ul>
+                </div>
+                <div className='pricing-btn'>
+                  <a className='main-btn' href='#contact'>
+                    Liên hệ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='col-lg-4 col-md-8 col-sm-9'>
+            <div className='single-pricing align--center mt-30'>
+              <div className='pricing-package'>
+                <h4 className='package-title'>Trà Đinh Thượng Hạng</h4>
+              </div>
+              <div className='pricing-body'>
+                <div className='pricing-text'>
+                  <p>Thu thành phẩm trà như cây đinh, sản phẩm làm thủ công 100%.</p>
+                  <span className='price'>2tr – 3tr5 / 1Kg</span>
+                </div>
+                <div className='pricing-list'>
+                  <ul>
+                    <li>
+                      - <strong>Đặc điểm</strong> : màu nước xanh trong, thơm, ngọt hậu sâu.
+                    </li>
+                    <li>
+                      - <strong>Cách hái</strong> : 1 tôm + 2 lá.
+                    </li>
+                    <li>- Giá trà búp Long Vân tại LoanTea: 2tr – 3tr5 / 1Kg</li>
                   </ul>
                 </div>
                 <div className='pricing-btn'>
