@@ -47,8 +47,8 @@ export default function Home() {
         />
         <meta property='og:url' content='https://landing-page-bantra.vercel.app/' />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content='https://landing-page-bantra.vercel.app/images/logo1.svg' />
-        <meta property='og:image:width' content='200' />
+        <meta property='og:image' content='https://landing-page-bantra.vercel.app/images/ogimage.png' />
+        <meta property='og:image:width' content='800' />
         <meta property='og:image:height' content='200' />
         <meta property='fb:app_id' content='' />
         <meta name='robots' content='index, follow' />
