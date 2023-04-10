@@ -50,6 +50,7 @@ export default function Home() {
         <meta property='og:image' content='https://landing-page-bantra.vercel.app/images/logo1.svg' />
         <meta property='og:image:width' content='200' />
         <meta property='og:image:height' content='200' />
+        <meta property='fb:app_id' content='270360913625993' />
         <meta name='robots' content='index, follow' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.png' />
