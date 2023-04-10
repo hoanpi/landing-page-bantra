@@ -24,7 +24,7 @@ export default function Selection1() {
       <section className='grid-row grid-row--center'>
         <div className='grid-column span-half pt3 pb3 mobile-m order-1 reveal-on-scroll'>
           <div className='relative'>
-            <Image className='info-image relative z2' src={cabin} alt='Cabin' width={422} height={422} />
+            <Image className='info-image relative z2' src={cabin} alt='trà mạn truyền thống' width={422} height={422} />
             <div className='pattern pattern--left-down absolute z1'></div>
           </div>
         </div>
@@ -44,13 +44,13 @@ export default function Selection1() {
         </div>
         <div className='grid-column span-half pt3 pb3 mobile-m order-3 reveal-on-scroll'>
           <div className='relative'>
-            <Image className='info-image relative z2' src={teepee} alt='Teepee' />
+            <Image className='info-image relative z2' src={teepee} alt='trà mạn lai 1' />
             <div className='pattern pattern--right-middle absolute z1'></div>
           </div>
         </div>
         <div className='grid-column span-half pt3 pb3 mobile-m order-5 reveal-on-scroll'>
           <div className='relative'>
-            <Image className='info-image relative z2' src={fishing} alt='Fishing' />
+            <Image className='info-image relative z2' src={fishing} alt='trà búp long vân' />
             <div className='pattern pattern--left-up absolute z1'></div>
           </div>
         </div>
@@ -70,13 +70,13 @@ export default function Selection1() {
         </div>
         <div className='grid-column span-half pt3 pb3 mobile-m order-7 reveal-on-scroll'>
           <div className='relative'>
-            <Image className='info-image relative z2' src={archery} alt='Archery' />
+            <Image className='info-image relative z2' src={archery} alt='trà móc câu' />
             <div className='pattern pattern--right-down absolute z1'></div>
           </div>
         </div>
         <div className='grid-column span-half pt3 pb3 mobile-m order-9 reveal-on-scroll'>
           <div className='relative'>
-            <Image className='info-image relative z2' src={canoeing} alt='Canoeing' />
+            <Image className='info-image relative z2' src={canoeing} alt='trà đinh thượng hạng' />
             <div className='pattern pattern--left-middle absolute z1'></div>
           </div>
         </div>

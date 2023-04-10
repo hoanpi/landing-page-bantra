@@ -8,6 +8,7 @@ import Selection1 from './Section/Section1'
 import Selection2 from './Section/Section2'
 import Selection3 from './Section/Section3'
 import Footer from './Footer'
+import ogimage from './../public/images/logo1.svg'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -46,7 +47,7 @@ export default function Home() {
         />
         <meta property='og:url' content='https://landing-page-bantra.vercel.app/' />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content='https://landing-page-bantra.vercel.app/themes/default/img/vclick_page.png' />
+        <meta property='og:image' content='https://landing-page-bantra.vercel.app/images/logo1.svg' />
         <meta property='og:image:width' content='200' />
         <meta property='og:image:height' content='200' />
         <meta name='robots' content='index, follow' />

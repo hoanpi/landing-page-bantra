@@ -11,7 +11,7 @@ export default function Header() {
         </p>
         <ul className='no-bullets list--inline mt1'>
           <li className='mr1'>
-            <a href='https://www.facebook.com' className='link'>
+            <a href='https://www.facebook.com/profile.php?id=100071252501707' className='link'>
               <Image className='icon' src={require('../../public/images/facebook.svg').default} alt='Facebook' />
             </a>
           </li>
@@ -21,7 +21,7 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href='https://www.instagram.com' className='link'>
+            <a href='https://instagram.com/tun_ori?igshid=YmMyMTA2M2Y=' className='link'>
               <Image className='icon' src={require('../../public/images/instagram.svg').default} alt='Instagram' />
             </a>
           </li>
