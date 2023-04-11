@@ -129,7 +129,7 @@ export default function Selection3(props: PopupProps) {
                 </div>
                 <div className='contact-content'>
                   <h6 className='contact-title'>Email</h6>
-                  <p>support@yourmail.com</p>
+                  <p>hoanpi96@gmail.com</p>
                   <p>info@helpline.com</p>
                 </div>
               </div>

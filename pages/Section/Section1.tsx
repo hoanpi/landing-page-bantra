@@ -1,9 +1,9 @@
 import React from 'react'
 import cabin from '../../public/images/1.jpg'
 import teepee from '../../public/images/2.jpg'
-import fishing from '../../public/images/fishing.jpg'
-import archery from '../../public/images/archery.jpg'
-import canoeing from '../../public/images/canoeing.jpg'
+import fishing from '../../public/images/5.jpg'
+import archery from '../../public/images/4.jpg'
+import canoeing from '../../public/images/3.jpg'
 import Image from 'next/image'
 
 export default function Selection1() {
